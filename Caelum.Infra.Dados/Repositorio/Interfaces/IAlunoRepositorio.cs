@@ -2,7 +2,7 @@
 
 namespace Caelum.Infra.Dados.Repositorio.Interfaces
 {
-    interface IAlunoRepositorio
+    public interface IAlunoRepositorio
     {
         IEnumerable<Aluno> Listar();
         void Salvar(Aluno aluno);

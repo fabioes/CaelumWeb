@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using Caelum.Infra.Dados.Repositorio;
+using Caelum.Infra.Dados.Repositorio.Interfaces;
+
 
 namespace CaelumWeb
 {
@@ -16,9 +19,8 @@ namespace CaelumWeb
         {
             var connection = @"Server=(localdb)\mssqllocaldb;Database=CadastroCaelum;Trusted_Connection=True;";
             services.AddDbContext<CaelumContext>(options => options.UseSqlServer(connection));
-
-
-
+            services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +39,16 @@ namespace CaelumWeb
                     context.Database.Migrate();
                 context.EnsureSeedData();
             }
-
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "areaRoute",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                    );
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

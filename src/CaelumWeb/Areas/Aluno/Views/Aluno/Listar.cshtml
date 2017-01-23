@@ -1,0 +1,20 @@
+﻿@{
+    var alunos = ViewBag.Alunos;
+}
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Endereco</th>
+        </tr>
+    </thead>
+    @foreach (var aluno in alunos)
+    {
+        <tr>
+            <td>@aluno.Nome</td>
+            <td>@aluno.Cpf</td>
+            <td>@aluno.Endereco</td>
+        </tr>
+    }
+</table>
