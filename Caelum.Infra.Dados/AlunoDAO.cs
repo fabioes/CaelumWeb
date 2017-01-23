@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Caelum.Infra.Dados
 {
-    public class Aluno
+    public class AlunoDAO
     {
         [Key]
         public int Id { get; set; }

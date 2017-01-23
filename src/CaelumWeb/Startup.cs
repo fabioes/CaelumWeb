@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Caelum.Infra.Dados.Repositorio;
 using Caelum.Infra.Dados.Repositorio.Interfaces;
-
+using AutoMapper;
 
 namespace CaelumWeb
 {
@@ -20,6 +20,7 @@ namespace CaelumWeb
             var connection = @"Server=(localdb)\mssqllocaldb;Database=CadastroCaelum;Trusted_Connection=True;";
             services.AddDbContext<CaelumContext>(options => options.UseSqlServer(connection));
             services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
+            services.AddAutoMapper();
             services.AddMvc();
         }
 
@@ -43,7 +44,7 @@ namespace CaelumWeb
             {
                 routes.MapRoute(
                     name: "areaRoute",
-                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                    template: "{area:exists}/{controller=Aluno}/{action=Listar}/{id?}"
                     );
                 routes.MapRoute(
                     name: "default",

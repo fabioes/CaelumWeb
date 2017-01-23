@@ -7,15 +7,15 @@ namespace Caelum.Infra.Dados.Repositorio
     public class AlunoRepositorio : IAlunoRepositorio
     {
         protected readonly DbContext Context;
-        protected DbSet<Aluno> DbSet;
+        protected DbSet<AlunoDAO> DbSet;
 
         public AlunoRepositorio(CaelumContext context)
         {
             Context = context;
-            DbSet = context.Set<Aluno>();
+            DbSet = context.Set<AlunoDAO>();
         }
 
-        public void Deletar(Aluno aluno)
+        public void Deletar(AlunoDAO aluno)
         {
             using (Context)
             {
@@ -24,18 +24,18 @@ namespace Caelum.Infra.Dados.Repositorio
             }
 
         }
-        public void Salvar(Aluno aluno)
+        public void Salvar(AlunoDAO aluno)
         {
             using (Context)
             {
                 if (Context.Entry(aluno).State != EntityState.Modified)
-                    Context.Set<Aluno>().Add(aluno);
+                    Context.Set<AlunoDAO>().Add(aluno);
 
                 Context.SaveChanges();
             }
 
         }
-        public IEnumerable<Aluno> Listar()
+        public IEnumerable<AlunoDAO> Listar()
         {
             return DbSet;
         }
