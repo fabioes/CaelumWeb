@@ -26,5 +26,14 @@ namespace CaelumWeb.Areas.Controllers
             var _model = mapper.Map<IEnumerable<Aluno.Models.Aluno>>(alunos);
             return View(_model);
         }
+        [HttpGet]
+        //Nova notação
+        public IActionResult Inserir() => View();
+
+        [HttpPost]
+        public void Inserir(Aluno.Models.Aluno aluno)
+        {
+
+        }
     }
 }
