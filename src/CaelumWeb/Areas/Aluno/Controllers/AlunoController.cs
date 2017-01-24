@@ -25,8 +25,8 @@ namespace CaelumWeb.Areas.Controllers
         public IActionResult Listar()
         {
             var alunos = alunoRepositorio.Listar();
-            var _model = mapper.Map<IEnumerable<Aluno>>(alunos);
-            return View(_model);
+            var alunosDTO = mapper.Map<IEnumerable<Aluno>>(alunos);
+            return View(alunosDTO);
         }
         [HttpGet]
         //Nova notação
@@ -37,8 +37,8 @@ namespace CaelumWeb.Areas.Controllers
         {
             if (ModelState.IsValid)
             {
-                var alunoDTO = mapper.Map<AlunoDTO>(aluno);
-                alunoRepositorio.Salvar(alunoDTO);
+                var alunosDTO = mapper.Map<AlunoDTO>(aluno);
+                alunoRepositorio.Salvar(alunosDTO);
             }
             RedirectToAction("Listar");
         }

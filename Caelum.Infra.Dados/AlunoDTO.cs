@@ -12,6 +12,6 @@ namespace Caelum.Infra.Dados
         public string Endereco { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-        public List<CursoDTO> Curso { get; set; }
+        public List<CursoDTO> Cursos { get; set; }
     }
 }

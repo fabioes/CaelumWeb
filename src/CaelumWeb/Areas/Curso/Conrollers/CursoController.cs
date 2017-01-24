@@ -31,8 +31,8 @@ namespace CaelumWeb.Areas.Conrollers
         {
             if (ModelState.IsValid)
             {
-                var cursoDTO = Mapper.Map<CursoDTO>(curso);
-                cursoRepositorio.Salvar(cursoDTO);
+                var cursosDTO = Mapper.Map<CursoDTO>(curso);
+                cursoRepositorio.Salvar(cursosDTO);
                 RedirectToAction("Listar");
             }
         }

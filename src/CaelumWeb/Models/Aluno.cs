@@ -15,6 +15,6 @@ namespace CaelumWeb.Models
         public string Endereco { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-        public List<Curso> Curso { get; set; }
+        public List<Curso> Cursos { get; set; }
     }
 }
