@@ -1,18 +1,19 @@
 ﻿@model IEnumerable<CaelumWeb.Areas.Aluno.Models.Aluno>
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Cpf</th>
-                <th>Endereco</th>
-            </tr>
-        </thead>
-        @foreach (var aluno in Model)
-        {
-            <tr>
-                <td>@aluno.Nome</td>
-                <td>@aluno.Cpf</td>
-                <td>@aluno.Endereco</td>
-            </tr>
-        }
-    </table>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Endereco</th>
+        </tr>
+    </thead>
+    @foreach (var aluno in Model)
+    {
+        <tr>
+            <td>@aluno.Nome</td>
+            <td>@aluno.Cpf</td>
+            <td>@aluno.Endereco</td>
+        </tr>
+    }
+</table>
+@Html.ActionLink("Inserir", "Inserir", "Aluno")

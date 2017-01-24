@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Caelum.Infra.Dados;
 using Caelum.Infra.Dados.Repositorio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -33,7 +34,12 @@ namespace CaelumWeb.Areas.Controllers
         [HttpPost]
         public void Inserir(Aluno.Models.Aluno aluno)
         {
-
+            if (ModelState.IsValid)
+            {
+                var _model = mapper.Map<AlunoDAO>(aluno);
+                alunoRepositorio.Salvar(_model);
+            }
+            RedirectToAction("Listar");
         }
     }
 }
