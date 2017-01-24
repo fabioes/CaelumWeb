@@ -9,8 +9,8 @@ using System.Collections.Generic;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CaelumWeb.Areas.Controllers
-{C:\Users\fabio\Source\Repos\CaelumWeb\src\CaelumWeb\Areas\Aluno\Controllers\AlunoController.cs
-[Area("Aluno")]
+{
+    [Area("Aluno")]
     public class AlunoController : Controller
     {
         // GET: /<controller>/
