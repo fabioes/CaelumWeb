@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Caelum.Infra.Dados;
 using Caelum.Infra.Dados.Repositorio.Interfaces;
+using CaelumWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -8,8 +9,8 @@ using System.Collections.Generic;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CaelumWeb.Areas.Controllers
-{
-    [Area("Aluno")]
+{C:\Users\fabio\Source\Repos\CaelumWeb\src\CaelumWeb\Areas\Aluno\Controllers\AlunoController.cs
+[Area("Aluno")]
     public class AlunoController : Controller
     {
         // GET: /<controller>/
@@ -24,7 +25,7 @@ namespace CaelumWeb.Areas.Controllers
         public IActionResult Listar()
         {
             var alunos = alunoRepositorio.Listar();
-            var _model = mapper.Map<IEnumerable<Aluno.Models.Aluno>>(alunos);
+            var _model = mapper.Map<IEnumerable<Aluno>>(alunos);
             return View(_model);
         }
         [HttpGet]
@@ -32,12 +33,12 @@ namespace CaelumWeb.Areas.Controllers
         public IActionResult Inserir() => View();
 
         [HttpPost]
-        public void Inserir(Aluno.Models.Aluno aluno)
+        public void Inserir(Aluno aluno)
         {
             if (ModelState.IsValid)
             {
-                var _model = mapper.Map<AlunoDAO>(aluno);
-                alunoRepositorio.Salvar(_model);
+                var alunoDTO = mapper.Map<AlunoDTO>(aluno);
+                alunoRepositorio.Salvar(alunoDTO);
             }
             RedirectToAction("Listar");
         }

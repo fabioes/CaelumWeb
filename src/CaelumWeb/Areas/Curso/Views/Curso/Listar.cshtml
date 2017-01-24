@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CaelumWeb.Models.Curso>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nome</th>
+            </tr>
+            @foreach (var curso in Model)
+            {
+                <tr><td>@curso.Nome</td></tr>
+            }
+        </thead>
+    </table>
+    <a href="/Curso/Curso/Inserir" class="btn btn-primary"> Inserir</a>
+</div>

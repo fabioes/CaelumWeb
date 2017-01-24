@@ -7,15 +7,15 @@ namespace Caelum.Infra.Dados.Repositorio
     public class AlunoCursoRepositorio : IAlunoCursoRepositorio
     {
         protected readonly DbContext Context;
-        protected DbSet<AlunoCurso> DbSet;
+        protected DbSet<AlunoCursoDTO> DbSet;
 
         public AlunoCursoRepositorio(CaelumContext context)
         {
             Context = context;
-            DbSet = context.Set<AlunoCurso>();
+            DbSet = context.Set<AlunoCursoDTO>();
         }
 
-        public void Deletar(AlunoCurso alunoCurso)
+        public void Deletar(AlunoCursoDTO alunoCurso)
         {
             using (Context)
             {
@@ -24,17 +24,17 @@ namespace Caelum.Infra.Dados.Repositorio
             }
         }
 
-        public IEnumerable<AlunoCurso> Listar()
+        public IEnumerable<AlunoCursoDTO> Listar()
         {
             return DbSet;
         }
 
-        public void Salvar(AlunoCurso alunoCurso)
+        public void Salvar(AlunoCursoDTO alunoCurso)
         {
             using (Context)
             {
                 if (Context.Entry(alunoCurso).State != EntityState.Modified)
-                    Context.Set<AlunoCurso>().Add(alunoCurso);
+                    Context.Set<AlunoCursoDTO>().Add(alunoCurso);
 
                 Context.SaveChanges();
             }

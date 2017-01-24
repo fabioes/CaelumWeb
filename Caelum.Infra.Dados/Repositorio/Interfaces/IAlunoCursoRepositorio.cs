@@ -2,10 +2,10 @@
 
 namespace Caelum.Infra.Dados.Repositorio.Interfaces
 {
-    interface IAlunoCursoRepositorio
+    public interface IAlunoCursoRepositorio
     {
-        IEnumerable<AlunoCurso> Listar();
-        void Salvar(AlunoCurso alunoCurso);
-        void Deletar(AlunoCurso alunoCurso);
+        IEnumerable<AlunoCursoDTO> Listar();
+        void Salvar(AlunoCursoDTO alunoCurso);
+        void Deletar(AlunoCursoDTO alunoCurso);
     }
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Caelum.Infra.Dados
 {
-    public class AlunoDAO
+    public class AlunoDTO
     {
         [Key]
         public int Id { get; set; }
@@ -12,6 +12,6 @@ namespace Caelum.Infra.Dados
         public string Endereco { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-        public List<Curso> Curso { get; set; }
+        public List<CursoDTO> Curso { get; set; }
     }
 }

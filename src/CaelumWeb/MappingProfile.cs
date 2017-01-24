@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Caelum.Infra.Dados;
-using CaelumWeb.Areas.Aluno.Models;
+using CaelumWeb.Models;
 
 namespace CaelumWeb
 {
@@ -8,8 +8,10 @@ namespace CaelumWeb
     {
         public MappingProfile()
         {
-            CreateMap<Aluno, AlunoDAO>();
-            CreateMap<AlunoDAO, Aluno>();
+            CreateMap<Aluno, AlunoDTO>();
+            CreateMap<AlunoDTO, Aluno>();
+            CreateMap<Curso, CursoDTO>();
+            CreateMap<CursoDTO, Curso>();
         }
 
     }
