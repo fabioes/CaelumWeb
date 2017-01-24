@@ -38,5 +38,16 @@ namespace Caelum.Infra.Dados.Repositorio
                 Context.SaveChanges();
             }
         }
+        public void AtivarDesativarCurso(int id, bool ativo)
+        {
+            using (Context)
+            {
+                CursoDTO dto = new CursoDTO();
+                dto.Id = id;
+                dto.Ativo = ativo;
+
+                Context.SaveChanges();
+            }
+        }
     }
 }

@@ -1,16 +1,33 @@
-﻿@model IEnumerable<CaelumWeb.Models.Curso>
+﻿@model List<CaelumWeb.Models.Curso>
 
 <div class="container">
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Nome</th>
+                <th>Ativo</th>
             </tr>
-            @foreach (var curso in Model)
+            @for (int i = 0; i < Model.Count; i++)
             {
-                <tr><td>@curso.Nome</td></tr>
+                <tr>
+                    <td style="display:none;">
+                        <input asp-for="@Model[i].Id" id="id" />
+                    </td>
+                    <td>@Html.DisplayFor(model => model[i].Nome)</td>
+                    <td><input asp-for="@Model[i].Ativo" /></td>
+                </tr>
             }
         </thead>
     </table>
     <a href="/Curso/Curso/Inserir" class="btn btn-primary"> Inserir</a>
 </div>
+<script>
+    var url = "@Url.Action("AtivarDesativarCurso", "Curso")";
+    $(document).ready(function () {
+        $(":checkbox").click(function () {
+            var id = $(this).closest('td').attr('id');
+            console.log(id + ' : ' + this.checked);
+            $.post(url, { id: id, ativo: this.checked });
+        });
+    });
+</script>

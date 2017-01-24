@@ -14,7 +14,7 @@ namespace Caelum.Infra.Dados
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Configuração da tabela de alunos
-            modelBuilder.Entity<AlunoDTO>().HasMany(b => b.Curso).WithOne();
+            modelBuilder.Entity<AlunoDTO>().HasMany(b => b.Cursos).WithOne();
             modelBuilder.Entity<AlunoDTO>().Property(b => b.Id).HasColumnName("IdAluno");
             modelBuilder.Entity<AlunoDTO>().Property(b => b.Nome).HasColumnName("NmAluno").ForSqlServerHasColumnType("varchar(200)");
             modelBuilder.Entity<AlunoDTO>().Property(b => b.Cpf).ForSqlServerHasColumnType("varchar(50)");

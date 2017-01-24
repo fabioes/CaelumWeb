@@ -7,13 +7,13 @@
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
             context.Curso.AddRange(
-              new CursoDTO { Nome = "ASP.NET Core" },
-              new CursoDTO { Nome = "Android 1" },
-              new CursoDTO { Nome = "Android 2" },
-              new CursoDTO { Nome = "IOS 1" },
-              new CursoDTO { Nome = "IOS 2" },
-              new CursoDTO { Nome = "Java Web" },
-              new CursoDTO { Nome = "Design Patterns Java" }
+              new CursoDTO { Nome = "ASP.NET Core", Ativo = false },
+              new CursoDTO { Nome = "Android 1", Ativo = true },
+              new CursoDTO { Nome = "Android 2", Ativo = true },
+              new CursoDTO { Nome = "IOS 1", Ativo = true },
+              new CursoDTO { Nome = "IOS 2", Ativo = false },
+              new CursoDTO { Nome = "Java Web", Ativo = true },
+              new CursoDTO { Nome = "Design Patterns Java", Ativo = true }
               );
             context.SaveChanges();
             context.Aluno.AddRange(

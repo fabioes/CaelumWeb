@@ -20,6 +20,7 @@ namespace CaelumWeb
             var connection = @"Server=(localdb)\mssqllocaldb;Database=CadastroCaelum;Trusted_Connection=True;";
             services.AddDbContext<CaelumContext>(options => options.UseSqlServer(connection));
             services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
+            services.AddScoped<ICursoRepositorio, CursoRepositorio>();
             services.AddAutoMapper();
             services.AddMvc();
         }
