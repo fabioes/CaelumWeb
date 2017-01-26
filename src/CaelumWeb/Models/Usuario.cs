@@ -1,6 +1,9 @@
-﻿namespace CaelumWeb.Models
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+
+namespace CaelumWeb.Models
 {
-    public class Usuario 
+    public class Usuario : IdentityUser
     {
 
     }

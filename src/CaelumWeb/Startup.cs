@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Caelum.Infra.Dados.Repositorio;
 using Caelum.Infra.Dados.Repositorio.Interfaces;
 using AutoMapper;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using CaelumWeb.Models;
 
 namespace CaelumWeb
 {
@@ -18,7 +20,13 @@ namespace CaelumWeb
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = @"Server=(localdb)\mssqllocaldb;Database=CadastroCaelum;Trusted_Connection=True;";
+
             services.AddDbContext<CaelumContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<IdentityContext>(options => options.UseSqlServer(connection));
+            services.AddIdentity<Usuario, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityContext>()
+       .AddDefaultTokenProviders();
+
             services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
             services.AddScoped<ICursoRepositorio, CursoRepositorio>();
             services.AddAutoMapper();
@@ -34,6 +42,12 @@ namespace CaelumWeb
             {
                 app.UseDeveloperExceptionPage();
             }
+            using (var context = app.ApplicationServices.GetService<IdentityContext>())
+            {
+                if (!context.Database.EnsureCreated())
+                    context.Database.EnsureCreated();
+                context.Database.Migrate();
+            }
             using (var context = app.ApplicationServices.GetService<CaelumContext>())
             {
 
@@ -41,6 +55,8 @@ namespace CaelumWeb
                     context.Database.Migrate();
                 context.EnsureSeedData();
             }
+
+            app.UseIdentity();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

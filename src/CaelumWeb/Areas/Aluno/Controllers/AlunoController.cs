@@ -2,6 +2,7 @@
 using Caelum.Infra.Dados;
 using Caelum.Infra.Dados.Repositorio.Interfaces;
 using CaelumWeb.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -11,6 +12,7 @@ using System.Collections.Generic;
 namespace CaelumWeb.Areas.Controllers
 {
     [Area("Aluno")]
+    [Authorize]
     public class AlunoController : Controller
     {
         // GET: /<controller>/

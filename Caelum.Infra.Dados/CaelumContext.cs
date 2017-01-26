@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Caelum.Infra.Dados
 {
@@ -9,7 +10,7 @@ namespace Caelum.Infra.Dados
         { }
         public DbSet<AlunoDTO> Aluno { get; set; }
         public DbSet<CursoDTO> Curso { get; set; }
-        public DbSet<AlunoCursoDTO> AlunoCurso { get; set; }
+        public DbSet<AlunoCursoDTO> AlunoCurso { get; set; }        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,7 +27,7 @@ namespace Caelum.Infra.Dados
             modelBuilder.Entity<CursoDTO>().Property(b => b.Nome).HasColumnName("NmCurso").ForSqlServerHasColumnType("varchar(200)");
             modelBuilder.Entity<AlunoCursoDTO>().Property(b => b.PercentualCompleto).HasColumnName("PctCompleto");
             modelBuilder.Entity<AlunoCursoDTO>().Property(b => b.DataFinal).HasColumnName("DtFinal");
-
+         
         }
     }
 
