@@ -39,7 +39,10 @@ namespace Caelum.Infra.Dados.Repositorio
         {
             return DbSet;
         }
-
+        public AlunoDTO ListarPorId(int idAluno)
+        {
+            return DbSet.Find(idAluno);
+        }
     }
 
 }

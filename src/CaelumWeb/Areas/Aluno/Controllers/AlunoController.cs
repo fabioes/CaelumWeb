@@ -33,14 +33,22 @@ namespace CaelumWeb.Areas.Controllers
         public IActionResult Inserir() => View();
 
         [HttpPost]
-        public void Inserir(Aluno aluno)
+        public IActionResult Inserir(Aluno aluno)
         {
             if (ModelState.IsValid)
             {
                 var alunosDTO = mapper.Map<AlunoDTO>(aluno);
                 alunoRepositorio.Salvar(alunosDTO);
             }
-            RedirectToAction("Listar");
+            return RedirectToAction("Listar");
+        }
+        [HttpPost]
+        public void Deletar(int id)
+        {
+            var aluno = alunoRepositorio.ListarPorId(id);
+            var alunoDTO = Mapper.Map<AlunoDTO>(aluno);
+            alunoRepositorio.Deletar(alunoDTO);
+
         }
     }
 }

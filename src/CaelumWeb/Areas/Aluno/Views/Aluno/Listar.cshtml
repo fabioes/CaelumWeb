@@ -6,6 +6,7 @@
                 <th>Nome</th>
                 <th>Cpf</th>
                 <th>Endereco</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -15,10 +16,19 @@
                     <td>@aluno.Nome</td>
                     <td>@aluno.Cpf</td>
                     <td>@aluno.Endereco</td>
+                    <td><a href="#" onclick="deletar(@aluno.Id)">Deletar</a></td>
                 </tr>
             }
         </tbody>
     </table>
-    <a href="/Aluno/Aluno/Inserir" class="btn btn-primary"> Inserir</a>
+    <button class="btn btn-primary" onclick="window.location.href = '/Aluno/Aluno/Inserir'"> Inserir</button>
 </div>
-
+<script>
+   function deletar(alunoId){
+        var url = "@Url.Action("Deletar","Aluno")";
+        $("a").click(function () {
+            $.post(url, { id: alunoId });
+        });
+        window.location.href = '/aluno';
+    }
+</script>
