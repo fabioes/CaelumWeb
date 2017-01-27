@@ -8,10 +8,10 @@ namespace CaelumWeb
     {
         public MappingProfile()
         {
-            CreateMap<Aluno, AlunoDTO>();
-            CreateMap<AlunoDTO, Aluno>();
-            CreateMap<Curso, CursoDTO>();
-            CreateMap<CursoDTO, Curso>();
+            CreateMap<Aluno, Aluno>();
+            CreateMap<Aluno, Aluno>();
+            CreateMap<Curso, Curso>();
+            CreateMap<Curso, Curso>();
         }
 
     }

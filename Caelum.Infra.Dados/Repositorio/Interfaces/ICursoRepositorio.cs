@@ -4,9 +4,9 @@ namespace Caelum.Infra.Dados.Repositorio.Interfaces
 {
     public interface ICursoRepositorio
     {
-        IEnumerable<CursoDTO> Listar();
-        void Salvar(CursoDTO curso);
-        void Deletar(CursoDTO curso);
+        IEnumerable<Curso> Listar();
+        void Salvar(Curso curso);
+        void Deletar(Curso curso);
         void AtivarDesativarCurso(int id, bool ativo);
     }
 }

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using Caelum.Infra.Dados;
 using Caelum.Infra.Dados.Repositorio.Interfaces;
-using CaelumWeb.Models;
+using CaelumWeb.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -25,17 +24,17 @@ namespace CaelumWeb.Areas.Conrollers
         public IActionResult Listar()
         {
             var cursosDTO = cursoRepositorio.Listar();
-            var cursos = Mapper.Map<IEnumerable<Curso>>(cursosDTO);
+            var cursos = Mapper.Map<IEnumerable<CursoViewModel>>(cursosDTO);
             return View(cursos);
         }
         public IActionResult Inserir() => View();
 
         [HttpPost]
-        public void Inserir(Curso curso)
+        public void Inserir(CursoViewModel curso)
         {
             if (ModelState.IsValid)
             {
-                var cursosDTO = Mapper.Map<CursoDTO>(curso);
+                var cursosDTO = Mapper.Map<Caelum.Infra.Dados.Curso>(curso);
                 cursoRepositorio.Salvar(cursosDTO);
                 RedirectToAction("Listar");
             }

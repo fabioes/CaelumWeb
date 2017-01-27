@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CaelumWeb.Models
+namespace CaelumWeb.ViewModels
 {
-    public class Curso
+    public class CursoViewModel
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Campo obrigatório.")]

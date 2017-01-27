@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using Caelum.Infra.Dados;
 using Caelum.Infra.Dados.Repositorio.Interfaces;
-using CaelumWeb.Models;
+using CaelumWeb.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -27,7 +26,7 @@ namespace CaelumWeb.Areas.Controllers
         public IActionResult Listar()
         {
             var alunos = alunoRepositorio.Listar();
-            var alunosDTO = mapper.Map<IEnumerable<Aluno>>(alunos);
+            var alunosDTO = mapper.Map<IEnumerable<AlunoViewModel>>(alunos);
             return View(alunosDTO);
         }
         [HttpGet]
@@ -35,11 +34,11 @@ namespace CaelumWeb.Areas.Controllers
         public IActionResult Inserir() => View();
 
         [HttpPost]
-        public IActionResult Inserir(Aluno aluno)
+        public IActionResult Inserir(AlunoViewModel aluno)
         {
             if (ModelState.IsValid)
             {
-                var alunosDTO = mapper.Map<AlunoDTO>(aluno);
+                var alunosDTO = mapper.Map<Caelum.Infra.Dados.Aluno>(aluno);
                 alunoRepositorio.Salvar(alunosDTO);
             }
             return RedirectToAction("Listar");
@@ -48,7 +47,7 @@ namespace CaelumWeb.Areas.Controllers
         public void Deletar(int id)
         {
             var aluno = alunoRepositorio.ListarPorId(id);
-            var alunoDTO = Mapper.Map<AlunoDTO>(aluno);
+            var alunoDTO = Mapper.Map<Caelum.Infra.Dados.Aluno>(aluno);
             alunoRepositorio.Deletar(alunoDTO);
 
         }

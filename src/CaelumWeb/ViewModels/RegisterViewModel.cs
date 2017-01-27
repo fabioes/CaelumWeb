@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CaelumWeb.Models
+namespace CaelumWeb.ViewModels
 {
     public class RegisterViewModel
     {
