@@ -1,0 +1,7 @@
+C:\Users\fabio\Source\Repos\CaelumWeb\Caelum.Infra.Dados\bin\Debug\netstandard1.4\Caelum.Infra.Dados.deps.json
+C:\Users\fabio\Source\Repos\CaelumWeb\Caelum.Infra.Dados\bin\Debug\netstandard1.4\Caelum.Infra.Dados.dll
+C:\Users\fabio\Source\Repos\CaelumWeb\Caelum.Infra.Dados\bin\Debug\netstandard1.4\Caelum.Infra.Dados.pdb
+C:\Users\fabio\Source\Repos\CaelumWeb\Caelum.Infra.Dados\obj\Debug\netstandard1.4\Caelum.Infra.Dados.AssemblyInfo.cs
+C:\Users\fabio\Source\Repos\CaelumWeb\Caelum.Infra.Dados\obj\Debug\netstandard1.4\Caelum.Infra.Dados.dll
+C:\Users\fabio\Source\Repos\CaelumWeb\Caelum.Infra.Dados\obj\Debug\netstandard1.4\Caelum.Infra.Dados.pdb
+C:\Users\fabio\Source\Repos\CaelumWeb\Caelum.Infra.Dados\obj\Debug\netstandard1.4\Caelum.Infra.Dados.csprojResolveAssemblyReference.cache

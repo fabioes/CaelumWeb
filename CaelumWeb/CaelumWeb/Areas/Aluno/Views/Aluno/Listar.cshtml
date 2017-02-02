@@ -1,0 +1,19 @@
+﻿<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Endereco</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (dynamic aluno in ViewBag.Alunos)
+        {
+            <tr>
+                <td>@aluno.Nome</td>
+                <td>@aluno.Cpf</td>
+                <td>@aluno.Endereco</td>
+            </tr>
+        }
+    </tbody>
+</table>
