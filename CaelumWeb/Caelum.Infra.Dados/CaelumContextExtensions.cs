@@ -17,11 +17,11 @@
               );
             context.SaveChanges();
             context.Aluno.AddRange(
-                new Aluno { Nome = "José Miranda da Silva", Cpf = "823.338.063-62" },
-                new Aluno { Nome = "João da Silva Medeiros", Cpf = "621.254.263-58" },
-                new Aluno { Nome = "Thiago Bastos Cordeiro", Cpf = "351.696.766-89" },
-                new Aluno { Nome = "Cláudio Quirino da Fonseca", Cpf = "955.368.767-91" },
-                new Aluno { Nome = "Rafael Souza de Lima", Cpf = "475.453.832-30" }
+                new Aluno { Nome = "José Miranda da Silva", Cpf = "823.338.063-62", Endereco = "Rua Cataventos, 340" },
+                new Aluno { Nome = "João da Silva Medeiros", Cpf = "621.254.263-58", Endereco = "Rua Vergueiro, 11" },
+                new Aluno { Nome = "Thiago Bastos Cordeiro", Cpf = "351.696.766-89", Endereco = "Avenida Ver. José Diniz, 1438" },
+                new Aluno { Nome = "Cláudio Quirino da Fonseca", Cpf = "955.368.767-91", Endereco = "Al. dos Jurupis, 57" },
+                new Aluno { Nome = "Rafael Souza de Lima", Cpf = "475.453.832-30", Endereco = "Av. Brasil, 1345" }
                 );
             context.SaveChanges();
         }
