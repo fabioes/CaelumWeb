@@ -1,0 +1,11 @@
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\bin\Debug\netcoreapp1.1\CaelumWeb.deps.json
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\bin\Debug\netcoreapp1.1\CaelumWeb.runtimeconfig.json
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\bin\Debug\netcoreapp1.1\CaelumWeb.runtimeconfig.dev.json
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\bin\Debug\netcoreapp1.1\CaelumWeb.dll
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\obj\Debug\netcoreapp1.1\CaelumWeb.csprojResolveAssemblyReference.cache
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\obj\Debug\netcoreapp1.1\CaelumWeb.AssemblyInfo.cs
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\bin\Debug\netcoreapp1.1\CaelumWeb.pdb
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\obj\Debug\netcoreapp1.1\CaelumWeb.dll
+c:\users\fabio\documents\visual studio 2017\Projects\CaelumWeb\CaelumWeb\obj\Debug\netcoreapp1.1\CaelumWeb.pdb
