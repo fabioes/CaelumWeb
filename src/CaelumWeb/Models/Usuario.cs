@@ -3,8 +3,8 @@
 
 namespace CaelumWeb.Models
 {
-    public class Usuario : IdentityUser
-    {
+    //public class Usuario : IdentityUser
+    //{
 
-    }
+    //}
 }

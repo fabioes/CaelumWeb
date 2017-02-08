@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<CaelumWeb.ViewModels.AlunoViewModel>
-<div class="container">
+<div class="container dom">
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -16,7 +16,7 @@
                     <td>@aluno.Nome</td>
                     <td>@aluno.Cpf</td>
                     <td>@aluno.Endereco</td>
-                    <td><a href="#" onclick="deletar(@aluno.Id)">Deletar</a></td>
+                    <td><a href="#" onclick="deletar(@aluno.Id);">Deletar</a></td>
                 </tr>
             }
         </tbody>
@@ -24,11 +24,12 @@
     <button class="btn btn-primary" onclick="window.location.href = '/Aluno/Aluno/Inserir'"> Inserir</button>
 </div>
 <script>
-   function deletar(alunoId){
+    function deletar(alunoId) {
         var url = "@Url.Action("Deletar","Aluno")";
-        $("a").click(function () {
-            $.post(url, { id: alunoId });
-        });
-        window.location.href = '/aluno';
+        var urlListar = "@Url.Action("Listar","Aluno")";
+        $.post(url, { id: alunoId } , atualiza(urlListar));
+    }
+    function atualiza(url) {
+        window.location.href = url;
     }
 </script>

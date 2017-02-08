@@ -44,12 +44,12 @@ namespace CaelumWeb.Areas.Controllers
             return RedirectToAction("Listar");
         }
         [HttpPost]
-        public void Deletar(int id)
+        public IActionResult Deletar(int id)
         {
             var aluno = alunoRepositorio.ListarPorId(id);
             var alunoDTO = Mapper.Map<Caelum.Infra.Dados.Aluno>(aluno);
             alunoRepositorio.Deletar(alunoDTO);
-
+            return PartialView("Aluno/Aluno/Listar", alunoRepositorio.Listar());
         }
     }
 }

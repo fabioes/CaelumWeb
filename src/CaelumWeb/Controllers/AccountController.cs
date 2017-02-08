@@ -1,4 +1,5 @@
-﻿using CaelumWeb.Models;
+﻿using Caelum.Infra.Dados;
+using CaelumWeb.Models;
 using CaelumWeb.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Caelum.Infra.Dados;
-using CaelumWeb.Models;
+using CaelumWeb.ViewModels;
 
 namespace CaelumWeb
 {
@@ -8,10 +8,10 @@ namespace CaelumWeb
     {
         public MappingProfile()
         {
-            CreateMap<Aluno, Aluno>();
-            CreateMap<Aluno, Aluno>();
-            CreateMap<Curso, Curso>();
-            CreateMap<Curso, Curso>();
+            CreateMap<Aluno, AlunoViewModel>();
+            CreateMap<AlunoViewModel, Aluno>();
+            CreateMap<Curso, CursoViewModel>();
+            CreateMap<CursoViewModel, Curso>();
         }
 
     }

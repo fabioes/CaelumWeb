@@ -22,9 +22,9 @@ namespace CaelumWeb
             var connection = @"Server=(localdb)\mssqllocaldb;Database=CadastroCaelum;Trusted_Connection=True;";
 
             services.AddDbContext<CaelumContext>(options => options.UseSqlServer(connection));
-            services.AddDbContext<IdentityContext>(options => options.UseSqlServer(connection));
-            services.AddIdentity<Usuario, IdentityRole>()
-                .AddEntityFrameworkStores<IdentityContext>()
+            //services.AddDbContext<IdentityContext>(options => options.UseSqlServer(connection));
+            services.AddIdentity<Caelum.Infra.Dados.Usuario, IdentityRole>()
+                .AddEntityFrameworkStores<CaelumContext>()
        .AddDefaultTokenProviders();
 
             services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
@@ -42,12 +42,7 @@ namespace CaelumWeb
             {
                 app.UseDeveloperExceptionPage();
             }
-            using (var context = app.ApplicationServices.GetService<IdentityContext>())
-            {
-                if (!context.Database.EnsureCreated())
-                    context.Database.EnsureCreated();
-                context.Database.Migrate();
-            }
+           
             using (var context = app.ApplicationServices.GetService<CaelumContext>())
             {
 
