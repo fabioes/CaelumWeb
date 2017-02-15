@@ -1,0 +1,25 @@
+﻿@model Caelumweb.ViewModels.AlunoViewModel
+
+
+<form asp-controller="Aluno" asp-action="Inserir" method="post">
+    <div class="container">
+        <table>
+            <tr>
+                <td><label asp-for="Nome">Nome :</label></td>
+                <td><input asp-for="Nome" class="form-control" /></td>
+                <td><span asp-validation-for="Nome" class="mensagem-erro"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Cpf">Cpf :</label></td>
+                <td><input asp-for="Cpf" class="form-control" /></td>
+                <td><span asp-validation-for="Cpf" class="mensagem-erro"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Endereco">Endereco :</label></td>
+                <td><input asp-for="Endereco" class="form-control" /></td>
+                <td><span asp-validation-for="Endereco" class="mensagem-erro"></span></td>
+            </tr>
+        </table>
+        <input type="submit" class="btn btn-primary" value="Salvar" />
+    </div>
+</form>
