@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Caelumweb.ViewModels.AlunoViewModel>
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Cpf
+                </th>
+                <th>
+                    Endereco
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var aluno in Model)
+            {
+                <tr>
+                    <td>@aluno.Nome</td>
+                    <td>@aluno.Cpf</td>
+                    <td>@aluno.Endereco</td>
+                    <td><a href="#" id="@aluno.Id" rel="deletar">Deletar</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button class="btn btn-primary" onclick='window.location.href = "/Aluno/Aluno/Inserir"'>Inserir</button>
+</div>
+<script>
+    $('a[rel="deletar"]').click(function () {
+        var url = "@Url.Action("Deletar","Aluno")";
+        var $tr = $(this).closest('tr');
+        $.post(url, { id: $(this).attr('id') }, $tr.find('td').fadeOut(1000, function () {
+            $tr.remove();
+        }))
+    });
+</script>

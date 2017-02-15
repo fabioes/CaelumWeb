@@ -1,0 +1,13 @@
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Caelumweb.deps.json
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Caelumweb.runtimeconfig.json
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Caelumweb.runtimeconfig.dev.json
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Caelumweb.dll
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Caelumweb.pdb
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\obj\Debug\netcoreapp1.1\Caelumweb.csprojResolveAssemblyReference.cache
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\obj\Debug\netcoreapp1.1\Caelumweb.AssemblyInfo.cs
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\obj\Debug\netcoreapp1.1\Caelumweb.dll
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\obj\Debug\netcoreapp1.1\Caelumweb.pdb
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Caelum.Infra.Dados.dll
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelumweb\bin\Debug\netcoreapp1.1\Caelum.Infra.Dados.pdb

@@ -1,0 +1,7 @@
+c:\users\alura\documents\visual studio 2017\Projects\Caelumweb\Caelum.Infra.Dados\bin\Debug\netstandard1.4\Caelum.Infra.Dados.deps.json
+C:\Users\Alura\Documents\Visual Studio 2017\Projects\Caelumweb\Caelum.Infra.Dados\bin\Debug\netstandard1.4\Caelum.Infra.Dados.dll
+C:\Users\Alura\Documents\Visual Studio 2017\Projects\Caelumweb\Caelum.Infra.Dados\bin\Debug\netstandard1.4\Caelum.Infra.Dados.pdb
+C:\Users\Alura\Documents\Visual Studio 2017\Projects\Caelumweb\Caelum.Infra.Dados\obj\Debug\netstandard1.4\Caelum.Infra.Dados.AssemblyInfo.cs
+C:\Users\Alura\Documents\Visual Studio 2017\Projects\Caelumweb\Caelum.Infra.Dados\obj\Debug\netstandard1.4\Caelum.Infra.Dados.dll
+C:\Users\Alura\Documents\Visual Studio 2017\Projects\Caelumweb\Caelum.Infra.Dados\obj\Debug\netstandard1.4\Caelum.Infra.Dados.pdb
+C:\Users\Alura\Documents\Visual Studio 2017\Projects\Caelumweb\Caelum.Infra.Dados\obj\Debug\netstandard1.4\Caelum.Infra.Dados.csprojResolveAssemblyReference.cache

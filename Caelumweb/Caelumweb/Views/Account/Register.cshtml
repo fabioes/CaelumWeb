@@ -1,0 +1,40 @@
+﻿@model Caelumweb.ViewModels.RegisterViewModel
+<form asp-controller="Account" asp-action="Register" method="post">
+    <div class="container">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1>Registrar</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <span asp-validation-summary="All"></span>
+                    <label asp-for="Username">Usuário :</label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="mensagem-erro"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <label asp-for="Password">Senha :</label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="mensagem-erro"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <label asp-for="ConfirmPassword">Confirmar Senha :</label>
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="mensagem-erro"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
